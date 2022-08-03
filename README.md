@@ -1,8 +1,8 @@
 # FlaskCards
 Web Application for Memorization using Flashcards
 
-Frontend built using HTML, CSS and Bootstrap
-Backend built using Python and Flask, connected to a database using SQLite
+- Frontend built using HTML, CSS and Bootstrap
+- Backend built using Python and Flask, connected to a database using SQLite
 
 ## Project Outline 
 1. New users can create an account on the 'Register' page
