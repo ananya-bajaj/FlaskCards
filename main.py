@@ -4,7 +4,6 @@ from datetime import datetime
 import time
 
 app=Flask(__name__)
-app.config['SECRET_KEY']='HELLO@54'
 @app.before_request
 def require_login():
     allowed_routes=['login','register']
