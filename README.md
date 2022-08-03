@@ -9,5 +9,5 @@ Web Application for Memorization using Flashcards
 2. Existing users can login and access their Dashboards
 3. Create new decks and add new cards to existing decks
 4. Review cards within each deck
-5. Track progress by assigning a difficulty level to every card, obtaining a score
+5. Track progress by assigning a difficulty level to every card, obtain a score
 6. Can review cards again, only after a certain review time 
