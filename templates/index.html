@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="static/style.css">
+  <link rel="stylesheet" href="static/index.css">
+	</head>
+	<body>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <div class="nav-title">
+                Welcome to FlaskCards!
+              </div>
+            </div>
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+            
+            <div class="nav-links">
+                <a href="/createdeck">Add Deck</a>
+                <a href="/logout">Logout</a>
+            </div>
+          </div>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Dashboard</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+                        <h2>Your Decks</h2>
+						<table class="table table-striped">
+                                <tr>
+                                    <th>Deck Name</th>
+                                    <th>Average Deck Score</th>
+                                    <th>Last Reviewed Time</th>
+                                    <th>Action</th>
+                                </tr>
+                                {% for row in rows %}
+                                <tr>
+                                    <td><a href="/review/{{row[0]}}" id="special">{{row[0]}}</a></td>
+                                    <td>{{row[1]}}</td>
+                                    <td>{{row[2]}}</td>
+                                    <td>
+                                        <a href="/deletedeck/{{row[0]}}">Delete |</a>
+                                        <a href="/updatedeck/{{row[0]}}"> Update Deck Name |</a> 
+                                        <a href="/addcard/{{row[0]}}"> Add a Card</a>
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                                
+                            </table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
